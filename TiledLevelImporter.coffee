@@ -18,8 +18,8 @@ Crafty.c "TiledLevel",
             components = "2D, #{drawType}, #{sName}, MapTile"
             if tsProperties
                 if tsProperties[tNum - 1]
-                    if tsProperties[tNum - 1]["components"]
-                        components += ", #{tsProperties[tNum - 1]["components"]}"
+                    for k,v of tsProperties[tNum - 1]
+                        components += ", " + k
             #console.log components
             Crafty.c tName,
                 comp: components
