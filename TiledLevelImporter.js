@@ -19,8 +19,8 @@
         components = "2D, " + drawType + ", " + sName + ", MapTile";
         if (tsProperties) {
           if (tsProperties[tNum - 1]) {
-            if (tsProperties[tNum - 1]["components"]) {
-              components += ", " + tsProperties[tNum - 1]["components"];
+            for (var key in tsProperties[tNum - 1]) {
+              components += ", " + key;
             }
           }
         }
